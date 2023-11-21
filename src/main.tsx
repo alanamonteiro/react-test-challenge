@@ -1,12 +1,15 @@
-import React from "react";
-import "./index.css";
-import ReactDOM from "react-dom/client";
+import "./styles/index.css";
+
+import { QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App.tsx";
-import { QueryClientProvider } from "react-query";
-import { queryClient } from "./services/queryClient.ts";
-import Contacts from "./pages/contacts/Contacts.tsx";
-import Notebook from "./pages/notebook/Notebook.tsx";
+
+import { App } from "./App";
+import { Contacts } from "./pages/contacts";
+import { Notebook } from "./pages/notebook";
+import { queryClient } from "./services/queryClient";
 
 const router = createBrowserRouter([
   {
@@ -23,10 +26,11 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
+      <ReactQueryDevtools />
     </QueryClientProvider>
-  </React.StrictMode>
+  </StrictMode>,
 );
