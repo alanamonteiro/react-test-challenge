@@ -9,7 +9,8 @@
     "build": "tsc && vite build",
     "lint": "eslint ./src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier -w ./src",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "jest --coverage"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.4.3",
