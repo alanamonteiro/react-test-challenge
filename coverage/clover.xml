@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1700680723961" clover="3.2.0">
+  <project timestamp="1700680723961" name="All files">
+    <metrics statements="28" coveredstatements="7" conditionals="13" coveredconditionals="1" methods="11" coveredmethods="1" elements="52" coveredelements="9" complexity="0" loc="28" ncloc="28" packages="2" files="3" classes="3"/>
+    <package name=".jest.mocks">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="fileMock.js" path="/home/lana/Documents/projetos-residencia/notebook-react-test/react-test-challenge/.jest/mocks/fileMock.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="28" coveredstatements="7" conditionals="13" coveredconditionals="1" methods="11" coveredmethods="1"/>
+      <file name="contact-card.tsx" path="/home/lana/Documents/projetos-residencia/notebook-react-test/react-test-challenge/src/components/contact-card.tsx">
+        <metrics statements="13" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="5" coveredmethods="1"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="38" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="48" count="3" type="stmt"/>
+      </file>
+      <file name="contact-form-card.tsx" path="/home/lana/Documents/projetos-residencia/notebook-react-test/react-test-challenge/src/components/contact-form-card.tsx">
+        <metrics statements="15" coveredstatements="0" conditionals="11" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
