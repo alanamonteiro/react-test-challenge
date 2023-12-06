@@ -12,7 +12,7 @@ const contact = {
     email: "josedasilva@gmail.com",
 }
 
-test("Card buttons are properly rendered", () => {
+test("Add card button are properly rendered", () => {
     const fakeFunction = jest.fn();
     render(<CreateContactCard onCreate={fakeFunction} />);
     const addButton = screen.getByText("+");
@@ -20,7 +20,7 @@ test("Card buttons are properly rendered", () => {
     expect(addButton).toBeDefined();
 });
 
-test("Card buttons are properly rendered", () => {
+test("Add new contact card box are properly rendered", () => {
     const fakeFunction = jest.fn();
     render(<CreateContactCard onCreate={fakeFunction} />);
     const addButton = screen.getByText("+");
@@ -36,7 +36,7 @@ test("Card buttons are properly rendered", () => {
     expect(cancelButton).toBeDefined();
 });
 
-test("Card buttons are properly rendered", () => {
+test("Name, Email and Phone can be field", () => {
     const fakeFunction = jest.fn();
     render(<CreateContactCard onCreate={fakeFunction} />);
     const addButton = screen.getByText("+");
@@ -51,7 +51,7 @@ test("Card buttons are properly rendered", () => {
     expect(phone).toBeDefined();
 });
 
-test("Card buttons are properly rendered", () => {
+test("Create a new contact card", () => {
     const fakeFunction = jest.fn();
     render(<CreateContactCard onCreate={fakeFunction} />);
     render(<ContactCard contact={contact} onDelete={fakeFunction} onEdit={fakeFunction} />);
@@ -76,4 +76,26 @@ test("Card buttons are properly rendered", () => {
     expect(nameCreated).toBeDefined();
     expect(emailCreated).toBeDefined();
     expect(phoneCreated).toBeDefined();
+});
+
+test("Cancel the process of create a new contact", () => {
+    const fakeFunction = jest.fn();
+    render(<CreateContactCard onCreate={fakeFunction} />);
+    render(<ContactCard contact={contact} onDelete={fakeFunction} onEdit={fakeFunction} />);
+
+    const addButton = screen.getByText("+");
+    fireEvent.click(addButton);
+    const cancelButton = screen.getByRole("button", { name: "Cancelar" });
+
+    const name: HTMLInputElement = screen.getByPlaceholderText('Name');
+    const email: HTMLInputElement = screen.getByPlaceholderText('Email');
+    const phone: HTMLInputElement = screen.getByPlaceholderText('Phone');
+
+    name.value = contact.name;
+    email.value = contact.email;
+    phone.value = contact.phone;
+    
+    fireEvent.click(cancelButton);
+
+    expect(addButton).toBeDefined();
 });
