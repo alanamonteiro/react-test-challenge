@@ -1,39 +1,36 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 
-import { ContactCard } from "./contact-card";
+import { NoteCard } from "./note-card";
 
 
 
-const contact = {
+const note = {
     id: 1,
-    name: "Jose da Silva",
-    phone: "81955896214",
-    email: "josedasilva@gmail.com",
+    title: "Jose da Silva",
+    description: "81955896214",
 }
 
 test("Card buttons are properly rendered", () => {
     const fakeFunction = jest.fn();
-    render(<ContactCard contact={contact} onDelete={fakeFunction} onEdit={fakeFunction} />);
+    render(<NoteCard note={note} onDelete={fakeFunction} onEdit={fakeFunction} />);
     const removeButton = screen.getByText("Remover");
     const editButton = screen.getByText("Editar");
     expect(removeButton).toBeDefined();
     expect(editButton).toBeDefined();
-  });
+});
 
-  test("Contact data is properly rendered", () => {
+test("Contact data is properly rendered", () => {
     const fakeFunction = jest.fn();
-    render(<ContactCard contact={contact} onDelete={fakeFunction} onEdit={fakeFunction} />);
-    const name = screen.getByText("Jose da Silva");
-    const email = screen.getByText("81955896214");
-    const phone = screen.getByText("josedasilva@gmail.com");
-    expect(name).toBeDefined();
-    expect(email).toBeDefined();
-    expect(phone).toBeDefined();
-  });
+    render(<NoteCard note={note} onDelete={fakeFunction} onEdit={fakeFunction} />);
+    const title = screen.getByText("Jose da Silva");
+    const description = screen.getByText("81955896214");
+    expect(title).toBeDefined();
+    expect(description).toBeDefined();
+});
 
-  test("The click on the remove button is working", () => {
+test("The click on the remove button is working", () => {
     const fakeFunction = jest.fn();
-    const { getByText } = render(<ContactCard contact={contact} onDelete={fakeFunction} onEdit={fakeFunction} />);
+    const { getByText } = render(<NoteCard note={note} onDelete={fakeFunction} onEdit={fakeFunction} />);
     const name = screen.getByText("Jose da Silva");
     const email = screen.getByText("81955896214");
     const phone = screen.getByText("josedasilva@gmail.com");
@@ -43,24 +40,25 @@ test("Card buttons are properly rendered", () => {
 
     const removeButton = getByText("Remover");
     expect(fakeFunction).not.toHaveBeenCalled();
-    
+
     fireEvent.click(removeButton);
 
     expect(fakeFunction).toHaveBeenCalledTimes(1);
-  });
+});
 
-  test("The click on the edit button is working", () => {
+test("The click on the edit button is working", () => {
     const editFakeFunction = jest.fn();
     const fakeFunction = jest.fn();
 
-    const { getByText } = render(<ContactCard contact={contact} onDelete={fakeFunction} onEdit={editFakeFunction} />);
-  
+    const { getByText } = render(<NoteCard note={note} onDelete={fakeFunction} onEdit={fakeFunction} />);
+
+
     const editButton = getByText("Editar");
     expect(editButton).toBeDefined();;
-    
-    
+
+
     expect(editFakeFunction).not.toHaveBeenCalled();
-    
+
     fireEvent.click(editButton);
 
     const saveButton = getByText("Salvar");
@@ -68,26 +66,25 @@ test("Card buttons are properly rendered", () => {
 
     expect(saveButton).toBeDefined();
     expect(cancelButton).toBeDefined();
-  });
+});
 
-  test("The click on the Save button is working", () => {
+test("The click on the Save button is working", () => {
     const editFakeFunction = jest.fn();
     const fakeFunction = jest.fn();
 
-    const { getByText } = render(<ContactCard contact={contact} onDelete={fakeFunction} onEdit={editFakeFunction} />);
-  
+    const { getByText } = render(<NoteCard note={note} onDelete={fakeFunction} onEdit={fakeFunction} />);
+
     const editButton = getByText("Editar");
     expect(editButton).toBeDefined();;
-    
-    
+
+
     expect(editFakeFunction).not.toHaveBeenCalled();
-    
+
     fireEvent.click(editButton);
-    
+
     const saveButton = getByText("Salvar");
 
     fireEvent.click(saveButton);
 
     expect(editFakeFunction).toHaveBeenCalled();
-  });
-
+});
