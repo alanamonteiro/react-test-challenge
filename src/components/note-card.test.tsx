@@ -6,8 +6,8 @@ import { NoteCard } from "./note-card";
 
 const note = {
     id: 1,
-    title: "Jose da Silva",
-    description: "81955896214",
+    title: "Nota 01",
+    description: "descricao da nota",
 }
 
 test("Card buttons are properly rendered", () => {
@@ -22,8 +22,8 @@ test("Card buttons are properly rendered", () => {
 test("Contact data is properly rendered", () => {
     const fakeFunction = jest.fn();
     render(<NoteCard note={note} onDelete={fakeFunction} onEdit={fakeFunction} />);
-    const title = screen.getByText("Jose da Silva");
-    const description = screen.getByText("81955896214");
+    const title = screen.getByText("Nota 01");
+    const description = screen.getByText("descricao da nota");
     expect(title).toBeDefined();
     expect(description).toBeDefined();
 });
@@ -31,12 +31,10 @@ test("Contact data is properly rendered", () => {
 test("The click on the remove button is working", () => {
     const fakeFunction = jest.fn();
     const { getByText } = render(<NoteCard note={note} onDelete={fakeFunction} onEdit={fakeFunction} />);
-    const name = screen.getByText("Jose da Silva");
-    const email = screen.getByText("81955896214");
-    const phone = screen.getByText("josedasilva@gmail.com");
-    expect(name).toBeDefined();
-    expect(email).toBeDefined();
-    expect(phone).toBeDefined();
+    const title = screen.getByText("Nota 01");
+    const description = screen.getByText("descricao da nota");
+    expect(title).toBeDefined();
+    expect(description).toBeDefined();
 
     const removeButton = getByText("Remover");
     expect(fakeFunction).not.toHaveBeenCalled();
@@ -72,7 +70,7 @@ test("The click on the Save button is working", () => {
     const editFakeFunction = jest.fn();
     const fakeFunction = jest.fn();
 
-    const { getByText } = render(<NoteCard note={note} onDelete={fakeFunction} onEdit={fakeFunction} />);
+    const { getByText } = render(<NoteCard note={note} onDelete={fakeFunction} onEdit={editFakeFunction} />);
 
     const editButton = getByText("Editar");
     expect(editButton).toBeDefined();;

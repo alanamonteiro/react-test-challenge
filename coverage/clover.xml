@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1701874473697" clover="3.2.0">
-  <project timestamp="1701874473697" name="All files">
-    <metrics statements="63" coveredstatements="53" conditionals="25" coveredconditionals="21" methods="25" coveredmethods="18" elements="113" coveredelements="92" complexity="0" loc="63" ncloc="63" packages="2" files="6" classes="6"/>
+<coverage generated="1701874934289" clover="3.2.0">
+  <project timestamp="1701874934289" name="All files">
+    <metrics statements="63" coveredstatements="56" conditionals="25" coveredconditionals="21" methods="25" coveredmethods="21" elements="113" coveredelements="98" complexity="0" loc="63" ncloc="63" packages="2" files="6" classes="6"/>
     <package name=".jest.mocks">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="fileMock.js" path="/home/lana/Documents/projetos-residencia/notebook-react-test/react-test-challenge/.jest/mocks/fileMock.js">
@@ -9,7 +9,7 @@
       </file>
     </package>
     <package name="src.components">
-      <metrics statements="63" coveredstatements="53" conditionals="25" coveredconditionals="21" methods="25" coveredmethods="18"/>
+      <metrics statements="63" coveredstatements="56" conditionals="25" coveredconditionals="21" methods="25" coveredmethods="21"/>
       <file name="contact-card.tsx" path="/home/lana/Documents/projetos-residencia/notebook-react-test/react-test-challenge/src/components/contact-card.tsx">
         <metrics statements="13" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
         <line num="19" count="9" type="stmt"/>
@@ -57,7 +57,7 @@
         <line num="27" count="4" type="stmt"/>
       </file>
       <file name="note-card.tsx" path="/home/lana/Documents/projetos-residencia/notebook-react-test/react-test-challenge/src/components/note-card.tsx">
-        <metrics statements="13" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="3"/>
+        <metrics statements="13" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
         <line num="16" count="8" type="stmt"/>
         <line num="18" count="8" type="stmt"/>
         <line num="19" count="2" type="stmt"/>
@@ -67,26 +67,26 @@
         <line num="27" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
         <line num="31" count="8" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
         <line num="35" count="8" type="cond" truecount="2" falsecount="0"/>
         <line num="36" count="2" type="stmt"/>
         <line num="45" count="6" type="stmt"/>
       </file>
       <file name="note-form-card.tsx" path="/home/lana/Documents/projetos-residencia/notebook-react-test/react-test-challenge/src/components/note-form-card.tsx">
-        <metrics statements="13" coveredstatements="10" conditionals="8" coveredconditionals="5" methods="5" coveredmethods="3"/>
-        <line num="14" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="15" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="18" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="21" count="2" type="stmt"/>
-        <line num="22" count="1" type="cond" truecount="1" falsecount="1"/>
+        <metrics statements="13" coveredstatements="12" conditionals="8" coveredconditionals="5" methods="5" coveredmethods="5"/>
+        <line num="14" count="9" type="cond" truecount="1" falsecount="1"/>
+        <line num="15" count="9" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="9" type="stmt"/>
+        <line num="18" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="9" type="stmt"/>
+        <line num="22" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="23" count="0" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="31" count="2" type="stmt"/>
-        <line num="33" count="2" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="31" count="9" type="stmt"/>
+        <line num="33" count="9" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
       </file>
     </package>
   </project>
