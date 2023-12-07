@@ -58,8 +58,8 @@ test("Create a new note card", () => {
     const title: HTMLInputElement = screen.getByPlaceholderText('Title');
     const description: HTMLInputElement = screen.getByPlaceholderText('Description');
 
-    title.value = note.title;
-    description.value = note.description;
+    fireEvent.change(title, { target: { value: note.title } });
+    fireEvent.change(description, { target: { value: note.description } });
     
     fireEvent.click(saveButton);
 
@@ -81,8 +81,8 @@ test("Cancel the process of create a new note", () => {
     const title: HTMLInputElement = screen.getByPlaceholderText('Title');
     const description: HTMLInputElement = screen.getByPlaceholderText('Description');
 
-    title.value = note.title;
-    description.value = note.description;
+    fireEvent.change(title, { target: { value: note.title } });
+    fireEvent.change(description, { target: { value: note.description } });
     
     fireEvent.click(cancelButton);
 

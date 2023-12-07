@@ -1,28 +1,10 @@
 {
   "contacts": [
     {
-      "id": 1,
-      "name": "Raphael",
-      "email": "brito@gmail.com",
-      "phone": "+558190836728"
-    },
-    {
-      "id": 2,
-      "name": "Cesar",
-      "email": "cesar@gmail.com",
-      "phone": "+558190836728"
-    },
-    {
-      "name": "2",
-      "email": "2",
-      "phone": "2",
-      "id": 3
-    },
-    {
-      "name": "2",
-      "email": "2",
-      "phone": "2",
-      "id": 4
+      "name": "1",
+      "email": "1",
+      "phone": "1",
+      "id": 1
     }
   ],
   "notes": [

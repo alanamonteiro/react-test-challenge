@@ -60,7 +60,7 @@ export function ContactFormCard({
       />
 
       <div className={styles.cardFooter}>
-        <button onClick={handleConfirm} disabled={!isValid()}>
+        <button onClick={handleConfirm}>
           Salvar
         </button>
         <button onClick={handleCancel}>Cancelar</button>

@@ -64,10 +64,10 @@ test("Create a new contact card", () => {
     const email: HTMLInputElement = screen.getByPlaceholderText('Email');
     const phone: HTMLInputElement = screen.getByPlaceholderText('Phone');
 
-    name.value = contact.name;
-    email.value = contact.email;
-    phone.value = contact.phone;
-    
+    fireEvent.change(name, { target: { value: contact.name } });
+    fireEvent.change(email, { target: { value: contact.email } });
+    fireEvent.change(phone, { target: { value: contact.phone } });
+
     fireEvent.click(saveButton);
 
     const nameCreated = screen.getByText("Jose da Silva");
